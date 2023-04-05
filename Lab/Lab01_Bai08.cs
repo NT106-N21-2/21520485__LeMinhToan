@@ -47,11 +47,12 @@ namespace Lab01
             double dtb = 0, min = 10, max = 0;
             int vtmin = 0, vtmax = 0;
             int smd65 = 0, smd5 = 0, smd35 = 0, smd2 = 0;
-            string[] list = thongtin.Text.Split(", ");
+            string[] list = thongtin.Text.Split(",");
             if (list.Length <= 1) dtb = -1;
             for (int i = 1; i < list.Length; i++)
             {
                 double diem;
+                list[i]=list[i].Replace(" ", "");
                 if (double.TryParse(list[i], out diem) && diem <= 10 && diem >= 0)
                 {
                     dtb += diem;

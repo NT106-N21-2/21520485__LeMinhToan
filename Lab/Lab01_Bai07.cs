@@ -160,7 +160,6 @@ namespace Lab01
 
         private void btn_del_Click(object sender, EventArgs e)
         {
-            // while (bangip.Rows.Count > 0) { bangip.Rows.RemoveAt(0); }
             bangip.Rows.Clear();
             ip.Clear();
             sb_mask.Clear();

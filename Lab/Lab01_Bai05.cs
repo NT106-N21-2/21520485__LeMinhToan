@@ -71,7 +71,5 @@ namespace Lab01
             sumtoB.Text = "";
             sumtoAB.Text = "";
         }
-
-
     }
 }
