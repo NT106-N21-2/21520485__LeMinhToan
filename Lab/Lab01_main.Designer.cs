@@ -141,7 +141,7 @@
             tittle_label.BackColor = Color.White;
             tittle_label.BorderStyle = BorderStyle.FixedSingle;
             tittle_label.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            tittle_label.Location = new Point(141, 62);
+            tittle_label.Location = new Point(142, 57);
             tittle_label.Margin = new Padding(4, 0, 4, 0);
             tittle_label.Name = "tittle_label";
             tittle_label.Size = new Size(429, 34);

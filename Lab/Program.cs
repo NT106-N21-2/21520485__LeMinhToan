@@ -1,3 +1,5 @@
+using Lab01;
+
 namespace Lab
 {
     internal static class Program
