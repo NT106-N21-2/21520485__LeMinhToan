@@ -1,6 +1,6 @@
 ﻿namespace Lab3
 {
-    partial class Lab3_bai3_menu
+    partial class Lab3_bai5_menu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lab3_bai3_menu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lab3_bai5_menu));
             btn_client = new Button();
             btn_server = new Button();
             pictureBox1 = new PictureBox();
@@ -37,51 +37,49 @@
             // 
             // btn_client
             // 
-            btn_client.BackColor = Color.Black;
             btn_client.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_client.ForeColor = Color.White;
-            btn_client.Location = new Point(69, 250);
+            btn_client.Location = new Point(46, 113);
             btn_client.Name = "btn_client";
-            btn_client.Size = new Size(153, 75);
+            btn_client.Size = new Size(128, 67);
             btn_client.TabIndex = 0;
             btn_client.Text = "Client";
-            btn_client.UseVisualStyleBackColor = false;
+            btn_client.UseVisualStyleBackColor = true;
             btn_client.Click += btn_client_Click;
             // 
             // btn_server
             // 
-            btn_server.BackColor = Color.Black;
             btn_server.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_server.ForeColor = Color.White;
-            btn_server.Location = new Point(69, 82);
+            btn_server.Location = new Point(46, 233);
             btn_server.Name = "btn_server";
-            btn_server.Size = new Size(153, 75);
+            btn_server.Size = new Size(128, 67);
             btn_server.TabIndex = 1;
             btn_server.Text = "Server";
-            btn_server.UseVisualStyleBackColor = false;
+            btn_server.UseVisualStyleBackColor = true;
             btn_server.Click += btn_server_Click;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(257, 12);
+            pictureBox1.Location = new Point(211, 37);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(208, 350);
+            pictureBox1.Size = new Size(337, 410);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
-            // Lab3_bai3_menu
+            // Lab3_bai5_menu
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(522, 409);
+            ClientSize = new Size(572, 483);
             Controls.Add(pictureBox1);
             Controls.Add(btn_server);
             Controls.Add(btn_client);
-            Name = "Lab3_bai3_menu";
-            Text = "Lab3_bai3";
+            Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            Margin = new Padding(4);
+            Name = "Lab3_bai5_menu";
+            Text = "Lab3_bai5_menu";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }

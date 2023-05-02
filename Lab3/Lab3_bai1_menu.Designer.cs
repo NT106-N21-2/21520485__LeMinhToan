@@ -30,37 +30,58 @@
         {
             btn_serverform = new Button();
             btn_clientform = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // btn_serverform
             // 
-            btn_serverform.Location = new Point(97, 116);
+            btn_serverform.BackColor = Color.Black;
+            btn_serverform.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_serverform.ForeColor = Color.White;
+            btn_serverform.Location = new Point(94, 89);
             btn_serverform.Name = "btn_serverform";
             btn_serverform.Size = new Size(131, 82);
             btn_serverform.TabIndex = 0;
             btn_serverform.Text = "UDP server";
-            btn_serverform.UseVisualStyleBackColor = true;
+            btn_serverform.UseVisualStyleBackColor = false;
             btn_serverform.Click += button1_Click;
             // 
             // btn_clientform
             // 
-            btn_clientform.Location = new Point(391, 116);
+            btn_clientform.BackColor = Color.Black;
+            btn_clientform.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_clientform.ForeColor = Color.White;
+            btn_clientform.Location = new Point(94, 234);
             btn_clientform.Name = "btn_clientform";
-            btn_clientform.Size = new Size(142, 82);
+            btn_clientform.Size = new Size(131, 82);
             btn_clientform.TabIndex = 1;
             btn_clientform.Text = "UDP client";
-            btn_clientform.UseVisualStyleBackColor = true;
+            btn_clientform.UseVisualStyleBackColor = false;
             btn_clientform.Click += button2_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources._09fcc60a5507d1ab92b587284f09a9c2;
+            pictureBox1.Location = new Point(269, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(230, 412);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
             // 
             // Lab3_bai1_menu
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(649, 323);
+            BackColor = Color.White;
+            ClientSize = new Size(500, 435);
+            Controls.Add(pictureBox1);
             Controls.Add(btn_clientform);
             Controls.Add(btn_serverform);
             Name = "Lab3_bai1_menu";
             Text = "Lab3_bai1_menu";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -68,5 +89,6 @@
 
         private Button btn_serverform;
         private Button btn_clientform;
+        private PictureBox pictureBox1;
     }
 }

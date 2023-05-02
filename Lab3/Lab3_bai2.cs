@@ -24,35 +24,36 @@ namespace Lab3
         {
             CheckForIllegalCrossThreadCalls = false;
             Thread server = new Thread(new ThreadStart(StartUnsafe));
-            bangchat.Text+="Start Listening!...\r\n";
+            bangchat.Text += "Start Listening!...\r\n";
             server.Start();
             server.IsBackground = true;
         }
-        public void StartUnsafe()
+        public async void StartUnsafe()
         {
-            int bytesrcv = 0;
-            byte[] recv = new byte[1];
+            NetworkStream stream;
+            byte[] buffer = new byte[1024];
+            int bytesReceived;
+
             Socket listenerSocket = new Socket(
                 AddressFamily.InterNetwork,
                 SocketType.Stream,
                 ProtocolType.Tcp
             );
-            IPEndPoint ipe = new IPEndPoint(IPAddress.Parse("192.168.1.67"), 9000);
+            IPEndPoint ipe = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 9000);
             listenerSocket.Bind(ipe);
             listenerSocket.Listen(-1);
-
+            
             Socket client = listenerSocket.Accept();
+            bangchat.Text += "Telnet running on 127.0.0.1:9000...  \n";
+            stream = new NetworkStream(client);
             while (client.Connected)
             {
-                string text = "";
-                do
-                {
-                  bytesrcv = client.Receive(recv);
-                  text += Encoding.UTF8.GetString(recv);
-                }while (text[text.Length - 1] == '\n');
-                bangchat.Text+=text;
+                 bytesReceived= stream.Read(buffer, 0, buffer.Length);
+                 string data = Encoding.UTF8.GetString(buffer, 0, bytesReceived);
+                 bangchat.Text += data;
             }
             listenerSocket.Close();
+      
         }
     }
 }
