@@ -36,35 +36,44 @@
             // 
             // btn_connect
             // 
+            btn_connect.BackColor = Color.Black;
+            btn_connect.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_connect.ForeColor = Color.White;
             btn_connect.Location = new Point(682, 54);
             btn_connect.Margin = new Padding(4);
             btn_connect.Name = "btn_connect";
             btn_connect.Size = new Size(134, 41);
             btn_connect.TabIndex = 0;
             btn_connect.Text = "Connect";
-            btn_connect.UseVisualStyleBackColor = true;
+            btn_connect.UseVisualStyleBackColor = false;
             btn_connect.Click += btn_connect_Click;
             // 
             // btn_send
             // 
+            btn_send.BackColor = Color.Black;
+            btn_send.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_send.ForeColor = Color.White;
             btn_send.Location = new Point(682, 133);
             btn_send.Margin = new Padding(4);
             btn_send.Name = "btn_send";
             btn_send.Size = new Size(134, 41);
             btn_send.TabIndex = 1;
             btn_send.Text = "Send";
-            btn_send.UseVisualStyleBackColor = true;
+            btn_send.UseVisualStyleBackColor = false;
             btn_send.Click += btn_send_Click;
             // 
             // btn_disconect
             // 
+            btn_disconect.BackColor = Color.Black;
+            btn_disconect.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_disconect.ForeColor = Color.White;
             btn_disconect.Location = new Point(682, 215);
             btn_disconect.Margin = new Padding(4);
             btn_disconect.Name = "btn_disconect";
             btn_disconect.Size = new Size(134, 41);
             btn_disconect.TabIndex = 2;
             btn_disconect.Text = "Disconnect";
-            btn_disconect.UseVisualStyleBackColor = true;
+            btn_disconect.UseVisualStyleBackColor = false;
             btn_disconect.Click += btn_disconect_Click;
             // 
             // bangchat

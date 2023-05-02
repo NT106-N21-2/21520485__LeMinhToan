@@ -40,7 +40,7 @@ namespace Lab3
             }
             else
             {
-                MessageBox.Show("vui long nhập port lại cho đúng!");
+                MessageBox.Show("vui lòng nhập port lại cho đúng!");
             }
         }
         private void btn_listen_Click(object sender, EventArgs e)
@@ -48,7 +48,7 @@ namespace Lab3
             CheckForIllegalCrossThreadCalls = false;
             Thread UDPserver = new Thread(new ThreadStart(serverThread));
             UDPserver.Start();
-            UDPserver.IsBackground= true;
+            UDPserver.IsBackground = true;
         }
 
     }

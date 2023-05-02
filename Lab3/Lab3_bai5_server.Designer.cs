@@ -1,6 +1,6 @@
 ﻿namespace Lab3
 {
-    partial class Lab3_bai3_server
+    partial class Lab3_bai5_server
     {
         /// <summary>
         /// Required designer variable.
@@ -36,47 +36,50 @@
             // 
             // btn_listen
             // 
-            btn_listen.BackColor = Color.Black;
-            btn_listen.Font = new Font("Segoe UI Black", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_listen.ForeColor = Color.White;
-            btn_listen.Location = new Point(549, 43);
+            btn_listen.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_listen.Location = new Point(552, 29);
+            btn_listen.Margin = new Padding(4);
             btn_listen.Name = "btn_listen";
-            btn_listen.Size = new Size(178, 58);
+            btn_listen.Size = new Size(187, 53);
             btn_listen.TabIndex = 0;
             btn_listen.Text = "Listen";
-            btn_listen.UseVisualStyleBackColor = false;
+            btn_listen.UseVisualStyleBackColor = true;
             btn_listen.Click += btn_listen_Click;
             // 
             // bangchat
             // 
-            bangchat.BackColor = SystemColors.Control;
+            bangchat.BackColor = SystemColors.Menu;
             bangchat.FormattingEnabled = true;
-            bangchat.ItemHeight = 25;
-            bangchat.Location = new Point(48, 43);
+            bangchat.ItemHeight = 30;
+            bangchat.Location = new Point(38, 29);
+            bangchat.Margin = new Padding(4);
             bangchat.Name = "bangchat";
-            bangchat.Size = new Size(474, 329);
+            bangchat.Size = new Size(466, 484);
             bangchat.TabIndex = 1;
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources._337377924_753227822941188_8911353241790681256_n1;
-            pictureBox1.Location = new Point(552, 136);
+            pictureBox1.Image = Properties.Resources.yellow_orange_animated_character_larva_animal_with_confused_expression_on_white_background_wallpaper_828x1792_218;
+            pictureBox1.Location = new Point(529, 89);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(175, 253);
+            pictureBox1.Size = new Size(230, 435);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
-            // Lab3_bai3_server
+            // Lab3_bai5_server
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(752, 405);
+            ClientSize = new Size(794, 551);
             Controls.Add(pictureBox1);
             Controls.Add(bangchat);
             Controls.Add(btn_listen);
-            Name = "Lab3_bai3_server";
-            Text = "Lab3_bai3_server";
+            Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            Margin = new Padding(4);
+            Name = "Lab3_bai5_server";
+            Text = "Lab3_bai5_server";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }

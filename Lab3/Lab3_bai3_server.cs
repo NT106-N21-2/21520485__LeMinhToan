@@ -23,23 +23,24 @@ namespace Lab3
         TcpListener server;
         TcpClient client;
         NetworkStream stream;
-        
+
         private async void btn_listen_Click(object sender, EventArgs e)
         {
             btn_listen.Enabled = false;
-            server = new TcpListener(9001);
-         
+            server = new TcpListener(IPAddress.Parse("192.168.1.67"), 9001);
+
             server.Start();
 
             bangchat.Items.Add("Server started");
 
             client = await server.AcceptTcpClientAsync();
-            bangchat.Items.Add("Connection accepted " );
+            bangchat.Items.Add("Connection accepted " + server.LocalEndpoint);
 
             stream = client.GetStream();
             byte[] buffer = new byte[client.ReceiveBufferSize];
             int bytesRead;
             // Dạ đây là phần dùng try catch nhưng bị lỗi ạ
+            /*
             try
             {
                 while (true)
@@ -55,9 +56,11 @@ namespace Lab3
                 if (client != null) { client.Close(); }
                 if (stream != null) { stream.Close(); }
             }
-            //-------------------------------------------------------------------
+          
+            //-------------------------------------------------------------------*/
 
-            /* Dạ đây là phần em không dùng try catch và chạy được bình thường ạ/
+            //Dạ đây là phần em không dùng try catch và chạy được bình thường ạ/
+
             while (client.Connected)
             {
                 bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
@@ -68,11 +71,11 @@ namespace Lab3
                 string mess = Encoding.UTF8.GetString(buffer, 0, bytesRead);
                 bangchat.Items.Add("From client: " + mess);
             }
-            bangchat.Items.Add("Client disconnected!... " );
+            bangchat.Items.Add("Client disconnected!... ");
             if (client != null) { client.Close(); }
             if (stream != null) { stream.Close(); }
-            */
-            //-------------------------------------------------------------------
+
+            //-------------------------------------------------------------------*/
             server.Stop();
             btn_listen.Enabled = true;
         }

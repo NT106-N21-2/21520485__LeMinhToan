@@ -39,7 +39,7 @@ namespace Lab3
                 {
                     await this.clienttcp.ConnectAsync(this.ip, this.port);
                 }
-                catch(Exception ex) 
+                catch (Exception ex)
                 {
                     MessageBox.Show("Error: " + ex.Message);
                 }
@@ -51,14 +51,14 @@ namespace Lab3
                 byte[] mess = Encoding.UTF8.GetBytes(s);
                 this.stream.Write(mess, 0, mess.Length);
             }
-            public  void disconnected()
+            public void disconnected()
             {
 
                 if (this.stream != null)
                 {
                     this.stream.Close();
                 }
-                if (this.clienttcp!=null) this.clienttcp.Close();
+                if (this.clienttcp != null) this.clienttcp.Close();
             }
         }
         TcpClient1_1 client;
@@ -69,7 +69,7 @@ namespace Lab3
             client = new TcpClient1_1(IPAddress.Parse("192.168.1.67"), 9001);
             client.Connect();
         }
-        
+
         private void btn_send_Click(object sender, EventArgs e)
         {
             if (bangchat.Text.Trim() != null)
@@ -88,8 +88,7 @@ namespace Lab3
             btn_connect.Enabled = true;
             btn_disconect.Enabled = false;
             client.disconnected();
-            
-        }
 
+        }
     }
 }

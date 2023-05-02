@@ -11,7 +11,7 @@ namespace Lab3
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Lab3_bai3_menu());
+            Application.Run(new Lab3_bai2());
         }
     }
 }
