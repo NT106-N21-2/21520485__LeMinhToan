@@ -30,6 +30,7 @@ namespace Lab3
         }
         public async void StartUnsafe()
         {
+            /*
             NetworkStream stream;
             byte[] buffer = new byte[1024];
             int bytesReceived;
@@ -53,7 +54,28 @@ namespace Lab3
                  bangchat.Text += data;
             }
             listenerSocket.Close();
-      
+            */
+            NetworkStream stream;
+            byte[] buffer = new byte[1024];
+            int bytesReceived;
+
+            Socket listenerSocket = new Socket(
+                AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            IPEndPoint ipe = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 9000);
+            listenerSocket.Bind(ipe);
+            listenerSocket.Listen(-1);
+
+            Socket client = listenerSocket.Accept();
+            bangchat.Text += "Telnet running on 127.0.0.1:9000... \n";
+            stream = new NetworkStream(client);
+            while (client.Connected)
+            {
+                bytesReceived = stream.Read(buffer, 0, buffer.Length);
+                string data = Encoding.UTF8.GetString(buffer, 0, bytesReceived);
+                bangchat.Text += data;
+            }
+            listenerSocket.Close();
+
         }
     }
 }
