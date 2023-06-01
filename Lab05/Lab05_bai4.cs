@@ -1,6 +1,7 @@
 ﻿using MailKit;
 using MailKit.Net.Imap;
 using MailKit.Net.Smtp;
+using MimeKit;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +20,12 @@ namespace Lab05
         public Lab05_bai4()
         {
             InitializeComponent();
-           
+            account.Text = "lory265265@gmail.com";
+            password.Text = "vaoalyvahsaclalq";
+            set_imap.Text = "imap.gmail.com";
+            set_smtp.Text = "smtp.gmail.com";
+            port_imap.Text = "993";
+            port_smtp.Text = "465";
         }
 
         private void btn_send_Click(object sender, EventArgs e)
@@ -104,8 +110,12 @@ namespace Lab05
         {
             var inbox = client.Inbox;
             var message = inbox.GetMessage(inbox.Count - e.RowIndex - 1);
-            Viewmessage_upgrade veu = new Viewmessage_upgrade(message.TextBody, message.From.ToString(), account.Text, message.Subject, account.Text, password.Text);
+
+            var body = message.BodyParts.OfType<TextPart>().FirstOrDefault(x => x.IsHtml);
+            
+            Viewmessage_upgrade veu = new Viewmessage_upgrade(body.Text, message.From.ToString(), account.Text, message.Subject, account.Text, password.Text);
             veu.Show();
         }
+       
     }
 }

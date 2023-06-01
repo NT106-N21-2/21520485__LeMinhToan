@@ -58,7 +58,7 @@ namespace Lab05
         private void btn_send_Click(object sender, EventArgs e)
         {
             var message = new MimeMessage();
-            message.From.Add(new MailboxAddress("Toan", from.Text));
+            message.From.Add(new MailboxAddress(name.Text, from.Text));
             if (mailto == "") mailto = to.Text;
             message.To.Add(new MailboxAddress("", mailto));
            // MessageBox.Show(mailto);

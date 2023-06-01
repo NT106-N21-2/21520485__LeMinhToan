@@ -34,8 +34,9 @@
             text_from = new TextBox();
             label = new Label();
             lable = new Label();
-            richTextBox1 = new RichTextBox();
+            webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)webView21).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
@@ -48,7 +49,7 @@
             groupBox1.Dock = DockStyle.Top;
             groupBox1.Location = new Point(0, 0);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(747, 177);
+            groupBox1.Size = new Size(743, 177);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             // 
@@ -101,27 +102,31 @@
             lable.TabIndex = 0;
             lable.Text = "From:";
             // 
-            // richTextBox1
+            // webView21
             // 
-            richTextBox1.Dock = DockStyle.Fill;
-            richTextBox1.Location = new Point(0, 177);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(747, 524);
-            richTextBox1.TabIndex = 2;
-            richTextBox1.Text = "";
+            webView21.AllowExternalDrop = true;
+            webView21.CreationProperties = null;
+            webView21.DefaultBackgroundColor = Color.White;
+            webView21.Dock = DockStyle.Fill;
+            webView21.Location = new Point(0, 177);
+            webView21.Name = "webView21";
+            webView21.Size = new Size(743, 524);
+            webView21.TabIndex = 3;
+            webView21.ZoomFactor = 1D;
             // 
             // Viewmessage_upgrade
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(747, 701);
-            Controls.Add(richTextBox1);
+            ClientSize = new Size(743, 701);
+            Controls.Add(webView21);
             Controls.Add(groupBox1);
             Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             Name = "Viewmessage_upgrade";
             Text = "Viewmessage_upgrade";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)webView21).EndInit();
             ResumeLayout(false);
         }
 
@@ -133,6 +138,6 @@
         private TextBox text_from;
         private Label label;
         private Label lable;
-        private RichTextBox richTextBox1;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
     }
 }
