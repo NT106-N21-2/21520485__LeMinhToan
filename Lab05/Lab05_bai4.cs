@@ -20,12 +20,7 @@ namespace Lab05
         public Lab05_bai4()
         {
             InitializeComponent();
-            account.Text = "lory265265@gmail.com";
-            password.Text = "vaoalyvahsaclalq";
-            set_imap.Text = "imap.gmail.com";
-            set_smtp.Text = "smtp.gmail.com";
-            port_imap.Text = "993";
-            port_smtp.Text = "465";
+           
         }
 
         private void btn_send_Click(object sender, EventArgs e)
